@@ -6,6 +6,9 @@ const PORT = process.env.PORT || 5000;
 // Connect Database
 connectDB();
 
+// Middileware
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('Wello Horld?'));
 
 // Define Routes
